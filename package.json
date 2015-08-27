@@ -1,0 +1,17 @@
+{
+  "name": "questions-service",
+  "version": "1.0.0",
+  "description": "Decoupled and distributed questions service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chance": "^0.7.6",
+    "gulp": "^3.9.0",
+    "lokijs": "^1.3.8",
+    "mocha": "^2.2.5"
+  }
+}
