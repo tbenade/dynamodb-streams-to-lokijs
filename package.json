@@ -6,12 +6,26 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tbenade/node-dynamodb-stream.git"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.1.47",
     "chance": "^0.7.6",
+    "deep-diff": "^0.3.2",
+    "dynamodb-doc": "^1.0.0",
+    "dynamodb-stream": "git+https://github.com/tbenade/node-dynamodb-stream.git",
+    "dynamodb-value": "^1.0.0",
     "gulp": "^3.9.0",
+    "hapi": "^9.0.3",
     "lokijs": "^1.3.8",
-    "mocha": "^2.2.5"
+    "mocha": "^2.2.5",
+    "tempus-fugit": "^2.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.4.1"
   }
 }
