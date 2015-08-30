@@ -1,6 +1,8 @@
 #!/bin/bash -e
 
 task=$1
+cd $(dirname "${BASH_SOURCE[0]}")
+
 IMAGE_NAME="dockerregistry.seekinfra.com/rolerequirements/role-questions-service-api"
 
 if [ "$task" = "deploy" ]; then
@@ -31,4 +33,8 @@ fi
 
 if [ "$task" = "runcontainer" ]; then
   docker run --rm -it -p 8080:8080 $IMAGE_NAME bash
+fi
+
+if [ "$task" = "hello" ]; then
+  echo "hello world"
 fi
