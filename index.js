@@ -9,9 +9,9 @@ var questionsDb = {};
 // Create a server with a host and port
 var server = new Hapi.Server();
 server.connection({
-  host: 'localhost',
-  port: 8000,
-  routes: {
+  host: '0.0.0.0',
+  port: 8080,
+  routes:{
     json: {
       space: 2
     }
@@ -44,6 +44,10 @@ server.route({
 var loadDb = function(questions){
   var db = new Loki('questions.json');
   var questionsCollection = db.addCollection('questions', { indices: ['type','id','text'] });
+
+  // if we dont have any questions return empty db
+  if(!questions)
+    return questionsCollection;
 
   //load in memory db
   console.time("populate in memory db");
