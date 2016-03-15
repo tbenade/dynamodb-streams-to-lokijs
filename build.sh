@@ -3,7 +3,7 @@
 task=$1
 cd $(dirname "${BASH_SOURCE[0]}")
 
-IMAGE_NAME="dockerregistry.seekinfra.com/rolerequirements/role-questions-service-api"
+IMAGE_NAME="dockerregistry.com/rolerequirements/role-questions-service-api"
 
 if [ "$task" = "deploy" ]; then
   aws cloudformation create-stack --stack-name role-questions-service \
@@ -16,7 +16,7 @@ if [ "$task" = "deploy" ]; then
   ParameterKey=QuestionsTableName,ParameterValue=role-questions-terry \
   ParameterKey=QuestionClassificationTableName,ParameterValue=role-questions-classification-terry \
   --capabilities CAPABILITY_IAM --tags Key=Stream,Value=RoleRequirements \
-  Key=Owner,Value=rolereqs@seek.com.au
+  Key=Owner,Value=rolereqs@aa.com.au
 fi
 
 if [ "$task" = "delete" ]; then
